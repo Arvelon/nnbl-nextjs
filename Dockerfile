@@ -1,9 +1,9 @@
-# 1️⃣ Build stage — install deps and build Next.js
+# 1️⃣ Build stage — build static export
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy dependency files first (for better layer caching)
+# Copy dependency manifests
 COPY package.json package-lock.json* yarn.lock* ./
 
 # Install dependencies
@@ -12,20 +12,17 @@ RUN npm ci --no-audit --no-fund
 # Copy the rest of the app
 COPY . .
 
-# Build the Next.js app
+# Build static output (uses "output: export" from next.config.js)
 RUN npm run build
 
-# Export static files (for Pages Router)
-RUN npm run export
-
-# 2️⃣ Serve stage — use nginx to serve the static export
+# 2️⃣ Serve stage — nginx serving the static export
 FROM nginx:alpine
 
-# Copy exported static files from builder
+# Copy static output from builder
 COPY --from=builder /app/out /usr/share/nginx/html
 
 # Remove default nginx page
-RUN rm -rf /usr/share/nginx/html/index.html
+RUN rm -f /usr/share/nginx/html/index.html
 
 # Expose port 80
 EXPOSE 80
