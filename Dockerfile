@@ -18,11 +18,11 @@ RUN npm run build
 # 2️⃣ Serve stage — nginx serving the static export
 FROM nginx:alpine
 
-# Copy static output from builder
-COPY --from=builder /app/out /usr/share/nginx/html
-
 # Remove default nginx page
 RUN rm -f /usr/share/nginx/html/index.html
+
+# Copy static output from builder
+COPY --from=builder /app/out /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
