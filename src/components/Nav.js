@@ -15,7 +15,7 @@ export default function Nav() {
       zIndex: 100,
     }}>
       <Link href="/">
-        <Image src="/logo.svg" alt="Logo" width={120} height={120} style={{ objectFit: 'contain' }} />
+        <Image src="/logo.svg" alt="Logo.svg" width={120} height={120} style={{ objectFit: 'contain' }} />
       </Link>
 
       <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
