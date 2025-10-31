@@ -23,15 +23,15 @@ jobs:
     # Build Docker image
     - name: Build Docker image
       run: |
-        docker build . -f Dockerfile -t ghcr.io/${{ github.repository_owner }}/nnbl-nextjs:${{ github.sha }}
+        docker build . -f Dockerfile -t ghcr.io/${{ github.repository_owner | lower }}/nnbl-nextjs:${{ github.sha }}
 
     # Tag image as 'latest'
     - name: Tag Docker image as latest
       run: |
-        docker tag ghcr.io/${{ github.repository_owner }}/nnbl-nextjs:${{ github.sha }} ghcr.io/${{ github.repository_owner }}/nnbl-nextjs:latest
+        docker tag ghcr.io/${{ github.repository_owner | lower }}/nnbl-nextjs:${{ github.sha }} ghcr.io/${{ github.repository_owner | lower }}/nnbl-nextjs:latest
 
     # Push both tags to GHCR
     - name: Push Docker image
       run: |
-        docker push ghcr.io/${{ github.repository_owner }}/nnbl-nextjs:${{ github.sha }}
-        docker push ghcr.io/${{ github.repository_owner }}/nnbl-nextjs:latest
+        docker push ghcr.io/${{ github.repository_owner | lower }}/nnbl-nextjs:${{ github.sha }}
+        docker push ghcr.io/${{ github.repository_owner | lower }}/nnbl-nextjs:latest
