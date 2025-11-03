@@ -1,5 +1,9 @@
 name: Docker Image CI
 
+permissions:
+  contents: read
+  packages: write
+
 # Trigger only on push to main (after PR merge)
 on:
   push:
