@@ -45,7 +45,6 @@ export default function Home() {
           }}
           onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#F5D1CC'}
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2C0BD'}
-          title="test"
         >
           Maak hier een afspraak
         </a>
