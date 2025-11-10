@@ -25,9 +25,9 @@ export default function Home() {
           priority
           style={{ objectFit: 'contain' }}
         />
-        {/* <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0 }}>Natural Nails by Lisa</h1> */}
         <p style={{ fontSize: '1.2rem', maxWidth: '500px' }}>
-          Beautiful nails, personalized care, and a relaxing experience. Book your appointment today!
+          Gun jezelf prachtige, verzorgde nagels en een moment van pure ontspanning.
+          Boek vandaag je behandeling en straal tot in de puntjes.
         </p>
         <a
           href="https://booking.naturalnailsbylisa.be"
@@ -46,7 +46,7 @@ export default function Home() {
           onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#F5D1CC'}
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2C0BD'}
         >
-          Maak hier een afspraak
+          Maak hier je afspraak
         </a>
       </section>
 
@@ -62,8 +62,9 @@ export default function Home() {
       }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Over Lisa</h2>
         <p style={{ maxWidth: '600px', fontSize: '1rem' }}>
-          Ik ben Lisa, een gepassioneerde nagelstyliste die zich richt op persoonlijke aandacht en een relaxte ervaring.
-          Elke nagelbehandeling wordt met zorg en liefde uitgevoerd, zodat jij met prachtige handen de deur uitgaat.
+          Ik ben Lisa, jouw nagelstyliste met passie voor perfectie en rust.
+          Met aandacht voor detail en liefde voor het vak creëer ik nagels die bij jouw stijl passen.
+          Jij verdient een behandeling die professioneel, persoonlijk én ontspannend is.
         </p>
       </section>
 
@@ -77,6 +78,10 @@ export default function Home() {
         textAlign: 'center',
       }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Diensten</h2>
+        <p style={{ maxWidth: '600px', fontSize: '1rem' }}>
+          Of je nu kiest voor natuurlijke verzorging of een elegante, duurzame nagelset:
+          elke behandeling wordt afgestemd op jouw wensen en lifestyle.
+        </p>
         <div style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -109,7 +114,10 @@ export default function Home() {
         textAlign: 'center',
         backgroundColor: '#fff8f6',
       }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Klaar voor mooie nagels?</h2>
+        <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Klaar voor prachtige nagels?</h2>
+        <p style={{ maxWidth: '600px', fontSize: '1rem' }}>
+          Plan eenvoudig je afspraak en ervaar zelf de combinatie van professionele zorg en ontspanning.
+        </p>
         <a
           href="https://booking.naturalnailsbylisa.be"
           target="_blank"
