@@ -37,7 +37,6 @@ export default function Home() {
       {/* About Section */}
       <section className="px-5 py-20 bg-[#fff8f6] text-center flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Over Lisa</h2>
-
         <p className="max-w-xl text-base">
           Ik ben Lisa, jouw nagelstyliste met passie voor perfectie en rust.
           Met aandacht voor detail en liefde voor het vak creëer ik nagels die bij jouw stijl passen.
@@ -48,7 +47,6 @@ export default function Home() {
       {/* Services Section */}
       <section className="px-5 py-20 text-center flex flex-col items-center gap-8">
         <h2 className="text-2xl font-bold">Diensten</h2>
-
         <p className="max-w-xl text-base">
           Of je nu kiest voor natuurlijke verzorging of een elegante, duurzame nagelset:
           elke behandeling wordt afgestemd op jouw wensen en lifestyle.
@@ -69,7 +67,6 @@ export default function Home() {
       {/* CTA Section */}
       <section className="px-5 py-20 bg-[#fff8f6] text-center flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold">Klaar voor prachtige nagels?</h2>
-
         <p className="max-w-xl text-base">
           Plan eenvoudig je afspraak en ervaar zelf de combinatie van professionele zorg en ontspanning.
         </p>
@@ -83,6 +80,16 @@ export default function Home() {
           Boek je afspraak
         </a>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 text-center py-10 mt-10 border-t border-gray-200">
+        <p className="text-sm text-gray-600">
+          © {new Date().getFullYear()} Natural Nails by Lisa — Alle rechten voorbehouden.
+        </p>
+        <p className="text-xs text-gray-400 mt-2">
+          Gemaakt met zorg in België.
+        </p>
+      </footer>
     </div>
   );
 }
