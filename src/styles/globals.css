@@ -19,8 +19,76 @@
   }
 }
 
+/* styles/globals.css */
+
+/* Regular */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueMediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueBoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold (optional) */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Extra Bold Italic (optional) */
+@font-face {
+  font-family: 'Galano';
+  src: url('/fonts/Galano/GalanoGrotesqueExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Galano', sans-serif;
 }
+
