@@ -1,6 +1,3 @@
-// pages/index.tsx — styled like margotfoubert.be but using YOUR
-// logo, colors (#F2C0BD, #F5D1CC, #fff8f6), names, content, links.
-
 import Image from "next/image";
 import Nav from "../components/Nav";
 import Link from "next/link";
@@ -10,20 +7,14 @@ export default function Home() {
     <div className="min-h-screen bg-white text-[#333] font-sans antialiased">
       <Nav />
 
-      {/* HERO */}
-      <header className="pt-32 pb-20 md:pt-40 md:pb-32 h-screen">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left text */}
+      {/* HERO — no fixed heights, fully DPR-safe */}
+      <header className="pt-4 pb-20 md:pt-36 md:pb-32 flex items-center">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+          {/* Left */}
           <div className="order-2 md:order-1">
-            <h1 className="text-4xl font-medium">
+            <h1 className="text-4xl md:text-5xl font-medium leading-tight">
               Natural Nails by Lisa
-              {/* <Image
-              src="/logo.svg"
-              alt="Natural Nails by Lisa logo"
-              width={450}
-              height={200}
-              className="object-contain"
-            /> */}
             </h1>
 
             <p className="mt-6 text-lg max-w-md text-[#555]">
@@ -41,6 +32,7 @@ export default function Home() {
               >
                 Maak een afspraak
               </a>
+
               <a
                 href="#services"
                 className="px-6 py-3 pb-2 rounded-full border border-[#E6A8A0] text-sm font-bold text-[#E6A8A0]"
@@ -51,13 +43,14 @@ export default function Home() {
           </div>
 
           {/* Right image */}
-          <div className="order-1 md:order-2 w-full h-80 md:h-[520px] rounded-md overflow-hidden flex items-center justify-center bg-[#fff8f6]">
+          <div className="order-1 md:order-2 w-full min-h-[45vh] md:min-h-[60vh] rounded-md overflow-hidden flex items-center justify-center">
             <Image
               src="/hero.jpg"
-              alt="Natural Nails by Lisa logo"
-              width={550}
+              alt="Natural Nails by Lisa"
+              width={500}
               height={500}
-              className="object-contain"
+              className="object-cover w-100 h-100 rounded-lgs"
+              priority
             />
           </div>
         </div>
@@ -66,39 +59,36 @@ export default function Home() {
       {/* ABOUT */}
       <section
         id="about"
-        className="py-24 px-6 flex justify-center items-center"
+        className="py-24 px-6 flex flex-col lg:flex-row gap-14 justify-center items-center"
         style={{ backgroundColor: "#fff8f6" }}
       >
-        <div className="max-w-3xl flex flex-col p-10 pr-30">
+        <div className="max-w-3xl flex flex-col p-6 lg:p-10">
           <h2 className="text-3xl font-semibold">Onze aanpak</h2>
-          <p className="text-[#555] text-lg max-w-2xl mb-10">
+          <p className="text-[#555] text-lg mb-10">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-            porro inventore architecto delectus consectetur ipsa nostrum. Minus,
-            aliquam, obcaecati fugit, quas assumenda sunt explicabo provident
-            suscipit aperiam quia beatae excepturi.
+            porro inventore architecto delectus consectetur ipsa nostrum.
           </p>
+
           <h2 className="text-3xl font-semibold">BIAP Strategie</h2>
-          <p className="text-[#555] text-lg max-w-2xl mb-10">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            sequi temporibus nobis itaque vero delectus dolorum minima veniam
-            dignissimos totam architecto dolorem, impedit cum nulla quae sint
-            dolores similique!
+          <p className="text-[#555] text-lg mb-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            sequi temporibus nobis.
           </p>
+
           <h2 className="text-3xl font-semibold">Verzorging</h2>
-          <p className="text-[#555] text-lg max-w-2xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
-            iusto, expedita dolorum doloribus voluptatum ipsa quod explicabo
-            voluptas, modi natus nisi voluptatem eveniet reiciendis numquam
-            incidunt hic ex aspernatur vero.
+          <p className="text-[#555] text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            iusto, expedita dolorum.
           </p>
         </div>
-        <div>
+
+        <div className="w-full max-w-lg rounded-md overflow-hidden">
           <Image
             src="/images/IMG_20250919_144126.jpg"
-            alt="Natural Nails by Lisa logo"
-            width={500}
-            height={500}
-            className="object-cover"
+            alt="Onze aanpak"
+            width={600}
+            height={600}
+            className="object-cover w-full h-full"
           />
         </div>
       </section>
@@ -108,31 +98,34 @@ export default function Home() {
         <h2 className="text-3xl font-semibold">Galerij</h2>
 
         <div className="max-w-5xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <Image
-              src="/images/IMG_20250919_141008.jpg"
-              alt={`Gallery image 1`}
-              width={300}
-              height={300}
-              className="object-cover"
-            />
-            <Image
-              src="/images/IMG_20251008_193322.jpg"
-              alt={`Gallery image 2`}
-              width={300}
-              height={300}
-              className="object-cover"
-            />
-            <Image
-              src="/images/IMG_20251105_192757.jpg"
-              alt={`Gallery image 3`}
-              width={300}
-              height={300}
-              className="object-cover"
-            />
+          <Image
+            src="/images/IMG_20250919_141008.jpg"
+            alt="Gallery image 1"
+            width={300}
+            height={300}
+            className="object-cover w-full h-full"
+          />
+
+          <Image
+            src="/images/IMG_20251008_193322.jpg"
+            alt="Gallery image 2"
+            width={300}
+            height={300}
+            className="object-cover w-full h-full"
+          />
+
+          <Image
+            src="/images/IMG_20251105_192757.jpg"
+            alt="Gallery image 3"
+            width={300}
+            height={300}
+            className="object-cover w-full h-full"
+          />
         </div>
+
         <Link href="/gallery">
-        <p className="hover:underline mt-10">Bekijk meer</p>
-      </Link>
+          <p className="hover:underline mt-10 cursor-pointer">Bekijk meer</p>
+        </Link>
       </section>
 
       {/* CTA */}
@@ -141,6 +134,7 @@ export default function Home() {
         style={{ backgroundColor: "#fff8f6" }}
       >
         <h2 className="text-3xl font-semibold">Klaar voor mooie nagels?</h2>
+
         <a
           href="https://booking.naturalnailsbylisa.be"
           target="_blank"

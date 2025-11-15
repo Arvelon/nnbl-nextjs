@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav className="flex justify-between items-center px-8 py-4 bg-white sticky top-0 z-50">
+    <nav className="flex justify-center md:justify-between items-center px-8 py-4 bg-white sticky top-0 z-50">
       <Link href="/" className="flex flex-col items-end">
         <h1 className="text-3xl font-medium">
           Natural Nails
@@ -18,7 +17,7 @@ export default function Nav() {
         <span className="text-sm -mt-2">by Lisa</span>
       </Link>
 
-      <div className="flex items-center gap-6">
+      <div className="md:flex items-center gap-6 hidden">
         <Link
           href="/"
           className="text-[#333] font-normal hover:opacity-70 transition text-xl"
